@@ -1,10 +1,11 @@
 .profile__title-container {
+  margin-bottom: 16px;
   display: flex;
-  gap: 0 3.274%;
+  gap: 0 18px;
   align-items: baseline;
-  margin-bottom: 2.91%;
-  /*display: flex;*/
-  /*gap: 18px;*/
-  /*align-items: center;*/
-  /*max-width: 336px;*/
+}
+@media screen and (max-width: 650px) {
+  .profile__title-container {
+    margin-bottom: 14px;
+  }
 }
