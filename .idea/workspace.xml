@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/vendor/inter.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/inter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/header/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/page/page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Jacques-Yves-Cousteau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Mesto-russia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,19 +30,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/kirillholzer/Dev/third-project/mesto",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kirillholzer/Dev/third-project/mesto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,7 +54,13 @@
       <workItem from="1667578709082" duration="14000" />
       <workItem from="1667578745076" duration="56000" />
       <workItem from="1667578816719" duration="58000" />
-      <workItem from="1667578952620" duration="2595000" />
+      <workItem from="1667578952620" duration="5336000" />
+      <workItem from="1667586593402" duration="195000" />
+      <workItem from="1667586816653" duration="21000" />
+      <workItem from="1667586839783" duration="3000" />
+      <workItem from="1667586861837" duration="98000" />
+      <workItem from="1667586975130" duration="2338000" />
+      <workItem from="1667646106780" duration="702000" />
     </task>
     <servers />
   </component>
