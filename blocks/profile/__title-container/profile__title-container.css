@@ -1,0 +1,10 @@
+.profile__title-container {
+  display: flex;
+  gap: 0 3.274%;
+  align-items: baseline;
+  margin-bottom: 2.91%;
+  /*display: flex;*/
+  /*gap: 18px;*/
+  /*align-items: center;*/
+  /*max-width: 336px;*/
+}
