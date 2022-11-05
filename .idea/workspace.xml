@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/element/__like-reaction/_active/element__like-button_active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/like-reaction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/footer/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__grid-item/element__grid-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__grid-item/element__grid-item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__info-box/element__info-box.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__info-box/element__info-box.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like-reaction/element__like-reaction.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__like-reaction/element__like-reaction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__text/element__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__text/element__text.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
@@ -63,7 +58,7 @@
       <workItem from="1667586861837" duration="98000" />
       <workItem from="1667586975130" duration="2338000" />
       <workItem from="1667646106780" duration="13625000" />
-      <workItem from="1667662768477" duration="8613000" />
+      <workItem from="1667662768477" duration="9635000" />
     </task>
     <servers />
   </component>

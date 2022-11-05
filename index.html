@@ -13,74 +13,70 @@
   <header class="header">
     <img class="header__logo" src="./images/Mesto-russia.png" alt="Логотип Место">
   </header>
-  <section class="profile">
-    <img class="profile__avatar" src="./images/Jacques-Yves-Cousteau.png" alt="Изображение профиля">
-    <div class="profile__info">
-      <div class="profile__title-container">
-        <h1 class="profile__name">Жак-Ив Кусто</h1>
-        <button class="button profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="./images/Jacques-Yves-Cousteau.png" alt="Изображение профиля">
+      <div class="profile__info">
+        <div class="profile__title-container">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="button profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+        </div>
+        <p class="profile__profession">Исследователь океана</p>
       </div>
-      <p class="profile__profession">Исследователь океана</p>
-    </div>
-    <button class="button profile__add-button" type="button" aria-label="Добавить карточку"></button>
-  </section>
+      <button class="button profile__add-button" type="button" aria-label="Добавить карточку"></button>
+    </section>
+    <section class="elements">
+      <ul class="list elements__grid-table">
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/jellyfish.jpg" alt="Медуза в Тихом Океане">
+          <div class="element__info-box">
+            <h2 class="element__text">Тихий Океан</h2>
+            <button class="button element__like-reaction element__like-reaction_active" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/antarctica.jpg" alt="Пингвины в Антрактиде">
+          <div class="element__info-box">
+            <h2 class="element__text">Антрактида</h2>
+            <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/baikal.jpg" alt="Озеро Байкал">
+          <div class="element__info-box">
+            <h2 class="element__text">Байкал</h2>
+            <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/japan.jpg" alt="Япония">
+          <div class="element__info-box">
+            <h2 class="element__text">Япония</h2>
+            <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/paris.jpg" alt="Париж">
+          <div class="element__info-box">
+            <h2 class="element__text">Париж</h2>
+            <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+        <li class="list element__grid-item">
+          <img class="element__image" src="./images/reef.jpg" alt="Караловый риф">
+          <div class="element__info-box">
+            <h2 class="element__text">Риф</h2>
+            <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <section class="elements">
-    <ul class="list elements__grid-table">
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/jellyfish.jpg" alt="Медуза в Тихом Океане">
-        <div class="element__info-box">
-          <h2 class="element__text">Тихий Океан</h2>
-          <button class="button element__like-reaction element__like-reaction_active" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/antarctica.jpg" alt="Пингвины в Антрактиде">
-        <div class="element__info-box">
-          <h2 class="element__text">Антрактида</h2>
-          <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/baikal.jpg" alt="Озеро Байкал">
-        <div class="element__info-box">
-          <h2 class="element__text">Байкал</h2>
-          <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/japan.jpg" alt="Япония">
-        <div class="element__info-box">
-          <h2 class="element__text">Япония</h2>
-          <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/paris.jpg" alt="Париж">
-        <div class="element__info-box">
-          <h2 class="element__text">Париж</h2>
-          <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-      <li class="list element__grid-item">
-        <img class="element__image" src="./images/reef.jpg" alt="Караловый риф">
-        <div class="element__info-box">
-          <h2 class="element__text">Риф</h2>
-          <button class="button element__like-reaction" type="button" aria-label="Добавить лайк"></button>
-        </div>
-      </li>
-    </ul>
-  </section>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2022 Mesto Russia by Kirill Goltser</p>
+    </footer>
+  </main>
 
-
-
-
-
-
-
-<!--  <footer class="footer">-->
-<!--    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>-->
-<!--  </footer>-->
 
 
 </body>

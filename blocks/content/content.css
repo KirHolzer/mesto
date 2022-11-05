@@ -1,0 +1,28 @@
+.content {
+  max-width: calc(1280px - 200px * 2);
+  margin: 0 auto;
+}
+
+/*@media screen and (max-width: 1279px) {*/
+/*  .content{*/
+/*    max-width: calc(100% - 150px * 2);*/
+/*  }*/
+/*}*/
+
+/*@media screen and (max-width: 1179px) {*/
+/*  .content {*/
+/*    max-width: calc(100% - 100px * 2);*/
+/*  }*/
+/*}*/
+
+/*@media screen and (max-width: 1079px) {*/
+/*  .content {*/
+/*    max-width: calc(100% - 50px * 2);*/
+/*  }*/
+/*}*/
+
+/*@media screen and (max-width: 980px) {*/
+/*  .content {*/
+/*    max-width: calc(100% - 19px * 2);*/
+/*  }*/
+/*}*/
