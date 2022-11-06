@@ -21,5 +21,31 @@
 @import url('../blocks/element/__like-reaction/_active/element__like-reaction_active.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/__form-container/popup__form-container.css');
+@import url('../blocks/popup/__form-item/popup__form-item.css');
+@import url('../blocks/popup/__input-name/popup__input-name.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__close-button/popup__close-button.css');
+@import url('../blocks/button/button.css');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
 @import url('');
 
+/*.form__job-input {*/
+/*  border-bottom: 1px solid rgba(0, 0, 0, .2);*/
+/*  font-size: 0.875rem;*/
+/*  line-height: 1.21;*/
+/*  width: 100%;*/
+
+/*  margin-bottom: 48px;*/
+/*  padding-bottom: 10px;*/
+/*}*/
+
+/*@media screen and (max-width: 480px) {*/
+/*  .form__job-input {*/
+/*    margin-bottom: 45px;*/
+/*  }*/
+/*}*/
