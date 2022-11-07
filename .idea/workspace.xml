@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +52,7 @@
       <workItem from="1667586861837" duration="98000" />
       <workItem from="1667586975130" duration="2338000" />
       <workItem from="1667646106780" duration="13625000" />
-      <workItem from="1667662768477" duration="25536000" />
+      <workItem from="1667662768477" duration="25837000" />
     </task>
     <servers />
   </component>
