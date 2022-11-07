@@ -12,5 +12,6 @@
   .popup__close-button {
     width: 20px;
     height: 20px;
+    transform: translate(10px, -66px);
   }
 }

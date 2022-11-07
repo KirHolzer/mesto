@@ -8,3 +8,15 @@
   border-radius: 10px;
   position: relative;
 }
+
+@media screen and (max-width: 480px) {
+  .popup__body{
+    max-width: 282px;
+    min-height: 322px;
+    margin: 123px auto 0 auto;
+    padding: 25px 22px;
+  }
+}
+
+
+
