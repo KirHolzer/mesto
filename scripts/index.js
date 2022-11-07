@@ -6,3 +6,6 @@ editButton.addEventListener('click', () => (
   popup.classList.add('popup_opened')
 ))
 
+popupClose.addEventListener('click', () => (
+  popup.classList.remove('popup_opened')
+))
