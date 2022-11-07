@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   background: rgb(0,0,0,.5);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: flex-start;
   padding-top: 195px;
