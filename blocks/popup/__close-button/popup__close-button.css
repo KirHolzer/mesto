@@ -7,11 +7,12 @@
   background: url('../../../images/Close-Icon.png') center no-repeat;
   border: none;
   transform: translate(35px, -35px);
+  z-index: 4;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 500px) {
   .popup__close-button {
     width: 20px;
     height: 20px;
-    transform: translate(10px, -66px);
+    transform: translate(0px, -36px);
   }
 }

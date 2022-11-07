@@ -1,18 +1,11 @@
 .popup {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
   bottom: 0;
-  background: rgb(0,0,0,.5);
+  right: 0;
   display: none;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 195px;
+  z-index: 99;
 }
-
-@media screen and (max-width: 480px) {
-  .popup{
-  }
-}
-
