@@ -5,7 +5,30 @@
   bottom: 0;
   right: 0;
   display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 99;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
+
+
+/*.popup__body {*/
+/*  max-width: 430px;*/
+/*  width: 100%;*/
+/*  padding: 34px 36px 37px;*/
+/*  box-sizing: border-box;*/
+/*  background: #FFFFFF;*/
+/*  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);*/
+/*  border-radius: 10px;*/
+/*  position: relative;*/
+/*}*/
+/*@media screen and (max-width: 480px) {*/
+/*  .popup__body{*/
+/*    max-width: 282px;*/
+/*    min-height: 322px;*/
+/*    margin: 123px auto 0 auto;*/
+/*    padding: 25px 22px;*/
+/*  }*/
+/*}*/
