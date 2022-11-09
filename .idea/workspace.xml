@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/active-like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/edit-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like-reaction/_active/element__like-reaction_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__like-reaction/_active/element__like-reaction_active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like-reaction/element__like-reaction.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__like-reaction/element__like-reaction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/edit-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/like-reaction.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/plus.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Close-Icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Close-Icon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
