@@ -1,4 +1,4 @@
-.element__info-box {
+.elements__info-box {
   max-width: 246px;
   margin: 0 auto;
   padding: 22px 15px 25px 21px;
@@ -6,4 +6,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
