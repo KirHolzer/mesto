@@ -4,18 +4,23 @@
   height: 50px;
   background: url('../../../images/plus.svg') center no-repeat;
   flex: none;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
+  flex-shrink: 1;
 }
+
+.profile__add-button:hover {
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 751px) {
   .profile__add-button {
-    /*max-heigt: 50px;*/
     width: 95px;
   }
 }
 
 @media screen and (max-width: 650px) {
   .profile__add-button {
-    /*max-heigt: 50px;*/
+    background-size: 16px 16px;
     width: 282px;
   }
 }
