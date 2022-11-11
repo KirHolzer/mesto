@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2ea95fb-7c5b-4dcb-a41d-e3aab6ebbeb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__grid-item/elements__grid-item.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__image/elements__image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__info-box/elements__info-box.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__like-reaction/_active/elements__like-reaction_active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__like-reaction/elements__like-reaction.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/elements/__text/elements__text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/MestoRussia.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__grid-item/element__grid-item.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__info-box/element__info-box.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like-reaction/_active/element__like-reaction_active.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like-reaction/element__like-reaction.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__text/element__text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/__grid-item/elements__grid-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/__grid-item/elements__grid-item.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/__like-reaction/elements__like-reaction.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/__like-reaction/elements__like-reaction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Mesto-russia.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
