@@ -1,7 +1,9 @@
 .popup__save-button{
+  box-sizing: border-box;
   padding: 14px 0 18px 0;
   margin-top: 45px;
   width: 100%;
+  max-height: 50px;
   background-color: #000000;
   color: #ffffff;
   border-radius: 2px;
