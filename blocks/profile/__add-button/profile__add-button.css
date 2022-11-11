@@ -5,6 +5,7 @@
   background: url('../../../images/plus.svg') center no-repeat;
   flex: none;
   border: 1px solid #ffffff;
+  flex-shrink: 1;
 }
 @media screen and (max-width: 751px) {
   .profile__add-button {

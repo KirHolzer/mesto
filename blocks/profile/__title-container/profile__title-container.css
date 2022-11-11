@@ -6,8 +6,8 @@
 }
 @media screen and (max-width: 650px) {
   .profile__title-container {
-    width: 209px;
     margin-bottom: 14px;
     gap: 0 10px;
+    justify-content: center;
   }
 }
