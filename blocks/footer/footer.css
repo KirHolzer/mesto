@@ -3,10 +3,14 @@
   margin:67px auto 60px auto;
   box-sizing: border-box;
 }
-
+@media screen and (max-width: 880px) {
+  .footer {
+  max-width: calc(100% - 40px*2);
+  }
+}
 @media screen and (max-width: 500px) {
   .footer {
-    margin: 0;
-    padding: 48px 0 36px;
+    max-width: 282px;
+    margin:48px auto 36px auto;
   }
 }
