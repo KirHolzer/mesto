@@ -1,10 +1,18 @@
 .popup__title {
-  margin: 0 0 54px 0;
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: black;
+
+  /*ПЕРЕПИСАНО - старое margin: 0 0 54px 0;*/
+  /*font-style: normal;*/
+  /*font-weight: 900;*/
+  /*font-size: 24px;*/
+  /*line-height: 29px;*/
+  /*color: black;*/
 }
 @media screen and (max-width: 500px) {
   .popup__title  {

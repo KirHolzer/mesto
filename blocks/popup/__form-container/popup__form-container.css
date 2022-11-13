@@ -1,7 +1,11 @@
 .popup__form-container{
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  box-sizing: border-box;
+  margin: 48px 0 0 0;
+  padding: 0;
+
+
+  /*ПЕРЕПИСАНО - старое display: flex;*/
+  /*flex-direction: column;*/
+  /*max-width: 100%;*/
+  /*box-sizing: border-box;*/
 }
 
