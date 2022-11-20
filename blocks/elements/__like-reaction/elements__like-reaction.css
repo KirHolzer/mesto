@@ -1,9 +1,9 @@
 .elements__like-reaction {
-  all:unset;
+  all: unset;
   width: 22px;
   height: 19px;
   padding: 0;
-  background-image: url(../../../images/like.svg);
+  background-image: url('../../../images/like.svg');
   border: none;
   background-repeat: no-repeat;
 }

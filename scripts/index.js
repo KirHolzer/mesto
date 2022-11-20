@@ -82,9 +82,19 @@ const generateElement = (element) => {
   const newElement = elementsTemplate.cloneNode(true);
   const elementsTitle = newElement.querySelector('.elements__text');
   const elementsImage = newElement.querySelector('.elements__image');
+  const deleteButton = newElement.querySelector('.elements__delete-button');
+  const likeButton = newElement.querySelector('.elements__like-reaction');
   elementsTitle.textContent = element.name;
   elementsImage.src = element.link;
-  console.log (newElement);
+  likeButton.addEventListener('click', function () {
+    likeButton.classList.toggle('elements__like-reaction_active');
+  });
+  deleteButton.addEventListener('click', function () {
+    newElement.remove();
+  });
+  elementsImage.addEventListener('click', function () {
+    kkjdflgkjhsdlfkjghljkdfhglskjfgsdfghlskdjfhglksjdfhgljkshf
+  })
   return newElement;
 }
 const renderElement = (element) => {
@@ -109,13 +119,14 @@ function formSubmitHandler (evt) {
 function formAddHandler (evt) {
   evt.preventDefault();
   const placeName = addNameInput.value;
-  const placeLink = jobInput.value;
+  const placeLink = addLinkInput.value;
+  console.log(addLinkInput);
   renderElement({ name: `${placeName}`, link: `${placeLink}` });
-  popupClose();
+  addPlacePopupClose();
 }
 
-
-closePopupAddButton.addEventListener('click', addPlacePopupClose)
+addFormElement.addEventListener('submit', formAddHandler);
+closePopupAddButton.addEventListener('click', addPlacePopupClose);
 addButton.addEventListener('click',addPlacePopupOpen)
 formElement.addEventListener('submit', formSubmitHandler);
 editButton.addEventListener('click', popupOpen);
