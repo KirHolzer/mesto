@@ -7,6 +7,8 @@ const formElement = document.querySelector('.popup__form-container');
 const nameInput = formElement.querySelector('.popup__input_type_name');
 const jobInput = formElement.querySelector('.popup__input_type_job');
 
+const elementsContainer = document.querySelector('.elements__grid-table')
+
 // КНОПКА ДОБАВИТЬ элемент
 const addButton = document.querySelector('.profile__add-button');
 const addPlacePopup = document.querySelector('.popup_type_new-place');
@@ -82,50 +84,16 @@ const generateElement = (element) => {
   const elementsImage = newElement.querySelector('.elements__image');
   elementsTitle.textContent = element.name;
   elementsImage.src = element.link;
-  console.log(newElement);
+  console.log (newElement);
   return newElement;
 }
 const renderElement = (element) => {
-  elementsTemplate.prepend(generateElement(element));
+  elementsContainer.prepend(generateElement(element));
   // elementsContainer .prepend(generateElement(element));
 }
 initialCards.forEach((element)=> {
   renderElement(element);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,17 +110,9 @@ function formAddHandler (evt) {
   evt.preventDefault();
   const placeName = addNameInput.value;
   const placeLink = jobInput.value;
-  addElement({ name: `${placeName}`, link: `${placeLink}` });
+  renderElement({ name: `${placeName}`, link: `${placeLink}` });
   popupClose();
 }
-
-
-
-
-
-
-
-
 
 
 closePopupAddButton.addEventListener('click', addPlacePopupClose)
