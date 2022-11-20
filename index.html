@@ -25,52 +25,58 @@
         </div>
         <button class="button profile__add-button" type="button" aria-label="Добавить карточку"></button>
       </section>
+
       <section class="elements">
-        <ul class="list elements__grid-table">
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/jellyfish.jpg" alt="Медуза в Тихом Океане">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Тихий Океан</h2>
-              <button class="button elements__like-reaction elements__like-reaction_active" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/antarctica.jpg" alt="Пингвины в Антрактиде">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Антрактида</h2>
-              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/baikal.jpg" alt="Озеро Байкал">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Байкал</h2>
-              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/japan.jpg" alt="Япония">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Япония</h2>
-              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/paris.jpg" alt="Париж">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Париж</h2>
-              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
-          <li class="elements__grid-item">
-            <img class="elements__image" src="./images/reef.jpg" alt="Караловый риф">
-            <div class="elements__info-box">
-              <h2 class="elements__text">Риф</h2>
-              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>
-            </div>
-          </li>
+        <ul class="elements__grid-table">
         </ul>
       </section>
+
+<!--      <section class="elements">-->
+<!--        <ul class="list elements__grid-table">-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/jellyfish.jpg" alt="Медуза в Тихом Океане">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Тихий Океан</h2>-->
+<!--              <button class="button elements__like-reaction elements__like-reaction_active" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/antarctica.jpg" alt="Пингвины в Антрактиде">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Антрактида</h2>-->
+<!--              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/baikal.jpg" alt="Озеро Байкал">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Байкал</h2>-->
+<!--              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/japan.jpg" alt="Япония">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Япония</h2>-->
+<!--              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/paris.jpg" alt="Париж">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Париж</h2>-->
+<!--              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="elements__grid-item">-->
+<!--            <img class="elements__image" src="./images/reef.jpg" alt="Караловый риф">-->
+<!--            <div class="elements__info-box">-->
+<!--              <h2 class="elements__text">Риф</h2>-->
+<!--              <button class="button elements__like-reaction" type="button" aria-label="Добавить лайк"></button>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </section>-->
     </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia by Kirill Goltser</p>
@@ -88,6 +94,27 @@
         </form>
     </div>
   </div>
+
+  <template id="elements__template">
+<!--    <li class="element">-->
+<!--      <button class="button element__delete-button" type="button" aria-label="Удалить элемент"></button>-->
+<!--      <div class="element__image-container">-->
+<!--        <img class="element__image" src="#" alt="Изображение в шаблоне">-->
+<!--      </div>-->
+<!--      <div class="element__text-box">-->
+<!--        <h2 class="element__text"></h2>-->
+<!--        <button class="button element__like-button" type="button" aria-label="Добавить лайк"></button>-->
+<!--      </div>-->
+<!--    </li>-->
+    <li class="elements__grid-item">
+      <img class="elements__image" src="#" alt="Изображение в шаблоне">
+      <button class="button elements__delete-button" type="button" aria-label="Удалить элемент"></button>
+      <div class="elements__info-box">
+        <h2 class="elements__text">Тихий Океан</h2>
+        <button class="button elements__like-reaction elements__like-reaction_active" type="button" aria-label="Добавить лайк"></button>
+      </div>
+    </li>
+  </template>
 
   <script src="./scripts/index.js"></script>
 
