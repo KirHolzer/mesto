@@ -95,17 +95,18 @@
     </div>
   </div>
 
+  <div class="popup popup_type_new-place">
+    <div class="popup__content">
+      <button class="popup__close-button button" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form-container form_type_new-place" action="#" name="profile-new-place-form">
+        <input class="popup__input popup__input_type_name" type="text"  name="name" placeholder="Название">
+        <input class="popup__input popup__input_type_job" type="text" name="link" placeholder="Ссылка на картинку">
+        <button class="popup__save-button button" type="submit">Создать</button>
+      </form>
+  </div>
+
   <template id="elements__template">
-<!--    <li class="element">-->
-<!--      <button class="button element__delete-button" type="button" aria-label="Удалить элемент"></button>-->
-<!--      <div class="element__image-container">-->
-<!--        <img class="element__image" src="#" alt="Изображение в шаблоне">-->
-<!--      </div>-->
-<!--      <div class="element__text-box">-->
-<!--        <h2 class="element__text"></h2>-->
-<!--        <button class="button element__like-button" type="button" aria-label="Добавить лайк"></button>-->
-<!--      </div>-->
-<!--    </li>-->
     <li class="elements__grid-item">
       <img class="elements__image" src="#" alt="Изображение в шаблоне">
       <button class="button elements__delete-button" type="button" aria-label="Удалить элемент"></button>
@@ -118,5 +119,5 @@
 
   <script src="./scripts/index.js"></script>
 
-</body>
+ </body>
 </html>
