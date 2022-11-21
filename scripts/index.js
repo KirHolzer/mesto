@@ -107,18 +107,18 @@ initialCards.forEach((element)=> {
 function formSubmitHandler (evt) {
   evt.preventDefault();
   const name = nameInput.value;
-  const profession = addLinkInput.value;
+  const profession = jobInput.value;
   profileName.textContent = name;
   profileProfession.textContent = profession;
+  console.log(profileProfession.textContent);
   popupClose();
 }
 function formAddHandler (evt) {
   evt.preventDefault();
   const placeName = addNameInput.value;
   const placeLink = addLinkInput.value;
-  console.log(addLinkInput);
   renderElement({ name: `${placeName}`, link: `${placeLink}` });
-  addPlacePopupClose();
+  popupClose();
 }
 
 addFormElement.addEventListener('submit', formAddHandler);
