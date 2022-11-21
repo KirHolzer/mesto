@@ -1,13 +1,10 @@
 .popup_type-image {
-  position: fixed;
   width: 100vw;
   height: 100vh;
-
-  align-items: flex-start;
-
   top: 0;
   left: 0;
-
+  position: fixed;
+  align-items: flex-start;
   background-color: rgba(0, 0, 0, .9);
   color: #000000;
 }
