@@ -12,7 +12,7 @@ const elementsContainer = document.querySelector('.elements__grid-table')
 // КНОПКА ДОБАВИТЬ элемент
 const addButton = document.querySelector('.profile__add-button');
 const addPlacePopup = document.querySelector('.popup_type_new-place');
-const addFormElement = addPlacePopup.querySelector('.form_type_new-place');
+const addFormElement = addPlacePopup.querySelector('.popup__form-container_type_new-place');
 const addNameInput= addFormElement.querySelector('.popup__input_type_name');
 const addLinkInput = addFormElement.querySelector('.popup__input_type_job');
 const closePopupAddButton = addPlacePopup.querySelector('.popup__close-button');
