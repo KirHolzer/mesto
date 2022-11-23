@@ -96,10 +96,6 @@ function formAddHandler (evt) {
 }
 
 addFormElement.addEventListener('submit', formAddHandler);
-// closePopupAddButton.addEventListener('click', () => {
-//   closePopup(); // TODO: вынести в отдельный метод
-//   addFormClear();
-// });
 formElement.addEventListener('submit', formSubmitHandler);
 editButton.addEventListener('click', () => openPopup (editPopup));
 addButton.addEventListener('click', () =>
@@ -109,3 +105,8 @@ addButton.addEventListener('click', () =>
 imagePopup.addEventListener('click', closePopup);
 
 closeButtons.forEach((closeButton) => closeButton.addEventListener('click', () => closePopup(closeButton.closest('.popup'))));
+
+// closePopupAddButton.addEventListener('click', () => {
+//   closePopup(); // TODO: вынести в отдельный метод
+//   addFormClear();
+// });
