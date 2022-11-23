@@ -1,5 +1,5 @@
 const editButton = document.querySelector('.profile__edit-button');
-const editPopup = document.querySelector('.popup');
+const editPopup = document.querySelector('.popup_type_edit');
 const closeButton = editPopup.querySelector('.popup__close-button');
 const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
@@ -18,10 +18,10 @@ const closePopupAddButton = addPlacePopup.querySelector('.popup__close-button');
 // ПОПАП картинка
 const imagePopup = document.querySelector('.popup_type-image');
 const imageBody = imagePopup.querySelector('.popup__image');
+// const imageAlt = imagePopup.querySelector('.popup__image');
 const imageCaption = imagePopup.querySelector('.popup__image-caption');
 
 // ЗАКРЫТИЕ/ОТКРЫТИЕ ПОПАПОВ
-
 const openPopup = function () {
   editPopup.classList.add('popup_opened');
   nameInput.value = profileName.textContent;
@@ -50,6 +50,7 @@ const generateElement = (element) => {
 
   elementsTitle.textContent = element.name;
   elementsImage.src = element.link;
+  elementsImage.alt = element.name;
 
   likeButton.addEventListener('click', function () {
     likeButton.classList.toggle('elements__like-reaction_active');
@@ -67,7 +68,9 @@ const generateElement = (element) => {
 }
 const popupOpenImage = function (element) {
   imageBody.src = element.link;
+  // imageAlt.alt = element.name;
   imageCaption.textContent = element.name;
+
   imagePopup.classList.add('popup_opened');
 }
 
