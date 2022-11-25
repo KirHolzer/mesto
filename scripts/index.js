@@ -10,9 +10,9 @@ const elementsContainer = document.querySelector('.elements__grid-table');
 // КНОПКА ДОБАВИТЬ элемент
 const addButton = document.querySelector('.profile__add-button');
 const popupNewCard = document.querySelector('.popup_type_new-place');
-const addFormElement = popupNewCard.querySelector('.popup__form-container_type_new-place');
-const addNameInput= addFormElement.querySelector('.popup__input_type_name');
-const addLinkInput = addFormElement.querySelector('.popup__input_type_job');
+const formNewElement = popupNewCard.querySelector('.popup__form-container_type_new-place');
+const cardNewName= formNewElement.querySelector('.popup__input_type_name');
+const cardNewLink = formNewElement.querySelector('.popup__input_type_job');
 // ПОПАП картинка
 const imagePopup = document.querySelector('.popup_type-image');
 const imageBody = imagePopup.querySelector('.popup__image');
@@ -70,8 +70,8 @@ initialCards.forEach((element)=> {
 })
 
 const addFormClear = () => {
-  addNameInput.value = "";
-  addLinkInput.value = "";
+  cardNewName.value = "";
+  cardNewLink.value = "";
 };
 
 function formSubmitHandler (evt) {
@@ -86,15 +86,15 @@ function formSubmitHandler (evt) {
 function formAddHandler (evt) {
   evt.preventDefault();
 
-  const placeName = addNameInput.value;
-  const placeLink = addLinkInput.value;
+  const placeName = cardNewName.value;
+  const placeLink = cardNewLink.value;
 
   renderElement({ name: `${placeName}`, link: `${placeLink}` });
   closePopup(popupNewCard);
   addFormClear();
 }
 
-addFormElement.addEventListener('submit', formAddHandler);
+formNewElement.addEventListener('submit', formAddHandler);
 formElement.addEventListener('submit', formSubmitHandler);
 editButton.addEventListener('click', () => openPopup (editPopup));
 addButton.addEventListener('click', () =>
