@@ -22,7 +22,6 @@ const openPopup = function (popup) {
   popup.classList.add('popup_opened');
 }
 
-
 const closePopup = function(popup) { // popup in params
   popup.classList.remove('popup_opened');
 }
