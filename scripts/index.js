@@ -6,23 +6,22 @@ const profileProfession = document.querySelector('.profile__profession');
 const formElement = document.querySelector('.popup__form-container');
 const nameInput = formElement.querySelector('.popup__input_type_name');
 const jobInput = formElement.querySelector('.popup__input_type_job');
-
 const elementsContainer = document.querySelector('.elements__grid-table');
 // КНОПКА ДОБАВИТЬ элемент
 const addButton = document.querySelector('.profile__add-button');
-const addPlacePopup = document.querySelector('.popup_type_new-place');
-const addFormElement = addPlacePopup.querySelector('.popup__form-container_type_new-place');
+const popupNewCard = document.querySelector('.popup_type_new-place');
+const addFormElement = popupNewCard.querySelector('.popup__form-container_type_new-place');
 const addNameInput= addFormElement.querySelector('.popup__input_type_name');
 const addLinkInput = addFormElement.querySelector('.popup__input_type_job');
 // ПОПАП картинка
 const imagePopup = document.querySelector('.popup_type-image');
 const imageBody = imagePopup.querySelector('.popup__image');
 const imageCaption = imagePopup.querySelector('.popup__image-caption');
-
 // ЗАКРЫТИЕ/ОТКРЫТИЕ ПОПАПОВ
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
 }
+
 
 const closePopup = function(popup) { // popup in params
   popup.classList.remove('popup_opened');
@@ -50,8 +49,8 @@ const generateElement = (element) => {
   });
 
   elementsImage.addEventListener('click', function() {
-    openPopup(imagePopup);
     fillPopupImage(element);
+    openPopup(imagePopup);
   });
 
   return newElement;
@@ -91,7 +90,7 @@ function formAddHandler (evt) {
   const placeLink = addLinkInput.value;
 
   renderElement({ name: `${placeName}`, link: `${placeLink}` });
-  closePopup(addPlacePopup);
+  closePopup(popupNewCard);
   addFormClear();
 }
 
@@ -100,7 +99,7 @@ formElement.addEventListener('submit', formSubmitHandler);
 editButton.addEventListener('click', () => openPopup (editPopup));
 addButton.addEventListener('click', () =>
   { addFormClear();
-    openPopup(addPlacePopup);
+    openPopup(popupNewCard);
   });
 imagePopup.addEventListener('click', closePopup);
 
