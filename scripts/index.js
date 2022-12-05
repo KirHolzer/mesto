@@ -1,6 +1,6 @@
 const editButton = document.querySelector('.profile__edit-button');
 const editPopup = document.querySelector('.popup_type_edit');
-const closeButtons = document.querySelectorAll('.popup__close-button');
+const popupList = document.querySelectorAll('.popup');
 const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
 const formElement = document.querySelector('.popup__form-container');
@@ -20,11 +20,22 @@ const imageCaption = imagePopup.querySelector('.popup__image-caption');
 // ЗАКРЫТИЕ/ОТКРЫТИЕ ПОПАПОВ
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', handlePopupCloseEsc);
 }
 
 const closePopup = function(popup) { // popup in params
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handlePopupCloseEsc);
 }
+
+const handlePopupCloseEsc = function(evt){
+  if (evt.key === "Escape") {
+    closePopup(document.querySelector('.popup_opened'));
+  }
+}
+
+
+
 
 const elementsTemplate = document.querySelector('#elements__template').content.querySelector('.elements__grid-item');
 
@@ -102,7 +113,11 @@ addButton.addEventListener('click', () =>
   });
 imagePopup.addEventListener('click', closePopup);
 
-closeButtons.forEach((closeButton) => closeButton.addEventListener('click', () => closePopup(closeButton.closest('.popup'))));
+popupList.forEach((popup) => {popup.addEventListener('click', (evt) => {
+  if(evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
+    closePopup(popup);}}
+     )});
+
 
 // closePopupAddButton.addEventListener('click', () => {
 //   closePopup(); // TODO: вынести в отдельный метод
