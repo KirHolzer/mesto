@@ -43,8 +43,10 @@
         <h2 class="popup__title">Редактировать профиль</h2>
           <form class="popup__form-container" action="#" name="profile-edit-form" novalidate>
             <input class="popup__input popup__input_type_name" type="text"  name="name" placeholder="Имя" value="Жак-Ив Кусто">
+            <span class="input-error title-input-error"></span>
             <input class="popup__input popup__input_type_job" type="text" name="job" placeholder="О себе"
                    value="Исследователь океана">
+            <span class="input-error job-input-error"></span>
             <button class="popup__save-button button" type="submit">Сохранить</button>
           </form>
       </div>
@@ -56,7 +58,9 @@
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__form-container popup__form-container_type_new-place" action="#" name="profile-new-place-form" novalidate>
           <input class="popup__input popup__input_type_name" type="text"  name="name" placeholder="Название">
+          <span class="input-error name-input-error"></span>
           <input class="popup__input popup__input_type_job" type="text" name="link" placeholder="Ссылка на картинку">
+          <span class="input-error url-input-error"></span>
           <button class="popup__save-button button" type="submit">Создать</button>
         </form>
       </div>
