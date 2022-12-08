@@ -2,7 +2,7 @@ const validationData = {
   formSelector: '.popup__form-container',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save-button',
-  inactiveButtonClass: 'popup__button_disabled',
+  inactiveButtonClass: 'popup__save-button_disabled',
   // создать
   inputErrorClass: 'popup__input_type_error',
   // красит в карсный цвет нижняя граница
@@ -52,7 +52,7 @@ const enableValidation = (validationData) => {
     formElement.addEventListener('submit', function (evt) {
       evt.preventDefault();
     });
-    setEventListeners(formElement,validationData)
+    setEventListeners(formElement, validationData)
   });
 };
 
@@ -60,15 +60,31 @@ enableValidation(validationData);
 
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
-  return !inputElement.validity.valid;
+    return !inputElement.validity.valid;
   });
 }
 
-function toggleButtonState(inputList,buttonElement,validationData) {
-    if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(validationData.inactiveButtonClass);
-      } else {
-        buttonElement.classList.remove(validationData.inactiveButtonClass);
-      }
+function toggleButtonState(inputList, buttonElement, validationData) {
+  if (hasInvalidInput(inputList)) {
+    disableButton(buttonElement, validationData);
+  }
+  else {
+    buttonElement.classList.remove(validationData.inactiveButtonClass);
+    buttonElement.disabled = false;
+  }
 }
+
+function disableButton(buttonElement, validationData) {
+  buttonElement.classList.add(validationData.inactiveButtonClass);
+  buttonElement.disabled = true;
+}
+
+function resetErrors(popup, validationData) {
+  const popupForm = popup.querySelector('.popup__form-container');
+  Array.from(popupForm.querySelectorAll(validationData.inputSelector)).forEach(input => {
+    hideInputError(popupForm, input, validationData);
+  });
+}
+
+
 

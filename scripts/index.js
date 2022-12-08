@@ -11,7 +11,7 @@ const elementsContainer = document.querySelector('.elements__grid-table');
 const addButton = document.querySelector('.profile__add-button');
 const popupNewCard = document.querySelector('.popup_type_new-place');
 const formNewElement = popupNewCard.querySelector('.popup__form-container_type_new-place');
-const cardNewName= formNewElement.querySelector('.popup__input_type_name');
+const cardNewName = formNewElement.querySelector('.popup__input_type_name');
 const cardNewLink = formNewElement.querySelector('.popup__input_type_job');
 // ПОПАП картинка
 const imagePopup = document.querySelector('.popup_type-image');
@@ -23,12 +23,12 @@ const openPopup = function (popup) {
   document.addEventListener('keydown', handlePopupCloseEsc);
 }
 
-const closePopup = function(popup) { // popup in params
+const closePopup = function (popup) { // popup in params
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', handlePopupCloseEsc);
 }
 
-const handlePopupCloseEsc = function(evt){
+const handlePopupCloseEsc = function (evt) {
   if (evt.key === "Escape") {
     closePopup(document.querySelector('.popup_opened'));
   }
@@ -58,7 +58,7 @@ const generateElement = (element) => {
     newElement.remove();
   });
 
-  elementsImage.addEventListener('click', function() {
+  elementsImage.addEventListener('click', function () {
     fillPopupImage(element);
     openPopup(imagePopup);
   });
@@ -75,7 +75,7 @@ const renderElement = (element) => {
   elementsContainer.prepend(generateElement(element));
 }
 
-initialCards.forEach((element)=> {
+initialCards.forEach((element) => {
   renderElement(element);
 })
 
@@ -84,16 +84,22 @@ const addFormClear = () => {
   cardNewLink.value = "";
 };
 
-function formSubmitHandler (evt) {
+const fillEditPopup = function (){
+  const name = profileName.textContent
+  const profession = profileProfession.textContent
+  nameInput.value = name;
+  jobInput.value = profession;
+}
+
+function formSubmitHandler(evt) {
   evt.preventDefault();
   const name = nameInput.value;
   const profession = jobInput.value;
   profileName.textContent = name;
   profileProfession.textContent = profession;
-
   closePopup(editPopup);
 }
-function formAddHandler (evt) {
+function formAddHandler(evt) {
   evt.preventDefault();
 
   const placeName = cardNewName.value;
@@ -106,17 +112,27 @@ function formAddHandler (evt) {
 
 formNewElement.addEventListener('submit', formAddHandler);
 formElement.addEventListener('submit', formSubmitHandler);
-editButton.addEventListener('click', () => openPopup (editPopup));
-addButton.addEventListener('click', () =>
-  { addFormClear();
-    openPopup(popupNewCard);
-  });
+editButton.addEventListener('click', () => {
+  resetErrors(editPopup, validationData);
+  fillEditPopup();
+  openPopup(editPopup);
+});
+addButton.addEventListener('click', () => {
+  addFormClear();
+  disableButton(popupNewCard.querySelector('.popup__save-button'), validationData);
+  resetErrors(popupNewCard, validationData);
+  openPopup(popupNewCard);
+});
 imagePopup.addEventListener('click', closePopup);
 
-popupList.forEach((popup) => {popup.addEventListener('click', (evt) => {
-  if(evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
-    closePopup(popup);}}
-     )});
+popupList.forEach((popup) => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
+      closePopup(popup);
+    }
+  }
+  )
+});
 
 
 // closePopupAddButton.addEventListener('click', () => {
