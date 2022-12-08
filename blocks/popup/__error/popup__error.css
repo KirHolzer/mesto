@@ -5,5 +5,5 @@
   color: #FF0000;
 
   min-height: 30px;
-
+  transition: visibility 0s, opacity 0s linear;
 }
