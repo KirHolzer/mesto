@@ -10,7 +10,7 @@
   text-align: center;
   color: #ffffff;
   background-color: #000000;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2px;
 
   /* ПЕРЕПИСАНО  all: unset;*/
