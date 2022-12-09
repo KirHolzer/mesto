@@ -91,7 +91,7 @@ const fillEditPopup = function (){
   jobInput.value = profession;
 }
 
-function formSubmitHandler(evt) {
+function submitFormHandler(evt) {
   evt.preventDefault();
   const name = nameInput.value;
   const profession = jobInput.value;
@@ -99,7 +99,7 @@ function formSubmitHandler(evt) {
   profileProfession.textContent = profession;
   closePopup(editPopup);
 }
-function formAddHandler(evt) {
+function addFormHandler(evt) {
   evt.preventDefault();
 
   const placeName = cardNewName.value;
@@ -110,8 +110,8 @@ function formAddHandler(evt) {
   addFormClear();
 }
 
-formNewElement.addEventListener('submit', formAddHandler);
-formElement.addEventListener('submit', formSubmitHandler);
+formNewElement.addEventListener('submit', addFormHandler);
+formElement.addEventListener('submit', submitFormHandler);
 editButton.addEventListener('click', () => {
   resetErrors(editPopup, validationData);
   fillEditPopup();
