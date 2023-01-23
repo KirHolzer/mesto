@@ -80,8 +80,7 @@ function disableButton(buttonElement, validationData) {
 }
 
 function resetErrors(popup, validationData) {
-  const popupForm = popup.querySelector(validationData.formSelector);
-  // const popupForm = popup.querySelector('.popup__form-container');
+  const popupForm = popup.querySelector('.popup__form-container');
   Array.from(popupForm.querySelectorAll(validationData.inputSelector)).forEach(input => {
     hideInputError(popupForm, input, validationData);
   });

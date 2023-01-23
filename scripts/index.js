@@ -84,22 +84,16 @@ const addFormClear = () => {
   cardNewLink.value = "";
 };
 
-const fillEditPopup = function (){
-  const name = profileName.textContent
-  const profession = profileProfession.textContent
-  nameInput.value = name;
-  jobInput.value = profession;
-}
-
-function submitFormHandler(evt) {
+function formSubmitHandler(evt) {
   evt.preventDefault();
   const name = nameInput.value;
   const profession = jobInput.value;
   profileName.textContent = name;
   profileProfession.textContent = profession;
+
   closePopup(editPopup);
 }
-function addFormHandler(evt) {
+function formAddHandler(evt) {
   evt.preventDefault();
 
   const placeName = cardNewName.value;
@@ -110,17 +104,15 @@ function addFormHandler(evt) {
   addFormClear();
 }
 
-formNewElement.addEventListener('submit', addFormHandler);
-formElement.addEventListener('submit', submitFormHandler);
+formNewElement.addEventListener('submit', formAddHandler);
+formElement.addEventListener('submit', formSubmitHandler);
 editButton.addEventListener('click', () => {
-  resetErrors(editPopup, validationData);
-  fillEditPopup();
   openPopup(editPopup);
+  resetErrors(editPopup, validationData);
 });
 addButton.addEventListener('click', () => {
   addFormClear();
   disableButton(popupNewCard.querySelector('.popup__save-button'), validationData);
-  resetErrors(popupNewCard, validationData);
   openPopup(popupNewCard);
 });
 imagePopup.addEventListener('click', closePopup);
