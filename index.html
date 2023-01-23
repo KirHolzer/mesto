@@ -50,7 +50,7 @@
         <input class="popup__input popup__input_type_job" id="job-input" type="text" name="job" placeholder="О себе"
           value="Исследователь океана" minlength="2" maxlength="200" required>
         <span class="popup__error job-input-error"></span>
-        <button class="popup__save-button button" type="submit">Сохранить</button>
+        <button class="button popup__save-button" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
@@ -67,7 +67,7 @@
         <input class="popup__input popup__input_type_job" id="url-input" type="url" name="link"
           placeholder="Ссылка на картинку" required>
         <span class="popup__error url-input-error"></span>
-        <button class="popup__save-button button" type="submit">Создать</button>
+        <button class="button popup__save-button" type="submit">Создать</button>
       </form>
     </div>
   </div>
@@ -93,9 +93,10 @@
     </li>
   </template>
 
-  <script src="./scripts/mockCards.js"></script>
-  <script src="./scripts/validate.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/card.js"></script>
+  <script type="module" src="./scripts/FormValidator.js"></script>
+  <!-- <script src="./scripts/validate.js"></script> -->
+  <script type="module" src="./scripts/index.js"></script>
 
 </body>
 
