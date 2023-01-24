@@ -1,35 +1,39 @@
 export class FormValidator {
     #validationData;
     #element;
+    #inputList;
+    #buttonElement;
 
-    #initClass(validationData, element){
-        this.#validationData = validationData;
+    #initClass(params, element){
+        this.#validationData = params;
         this.#element = element;
+        this.#inputList = Array.from(this.#element.querySelectorAll(this.#validationData.inputSelector));
+        this.#buttonElement = this.#element.querySelector(this.#validationData.submitButtonSelector);
     }
 
-    constructor(validationData, element)
+    constructor(params, element)
     {
-        if (!(Object.keys(validationData).includes("formSelector"))){
+        if (!(Object.keys(params).includes("formSelector"))){
             console.log("Ошибка ввода данных - 'formSelector' в классе 'FormValidator' не введено");
             return null;
-        }else if (!(Object.keys(validationData).includes("inputSelector"))){
+        }else if (!(Object.keys(params).includes("inputSelector"))){
             console.log("Ошибка ввода данных - 'inputSelector' в классе 'FormValidator' не введено");
             return null;
-        }else if (!(Object.keys(validationData).includes("submitButtonSelector"))){
+        }else if (!(Object.keys(params).includes("submitButtonSelector"))){
             console.log("Ошибка ввода данных - 'submitButtonSelector' в классе 'FormValidator' не введено");
             return null;
-        }else if (!(Object.keys(validationData).includes("inactiveButtonClass"))){
+        }else if (!(Object.keys(params).includes("inactiveButtonClass"))){
             console.log("Ошибка ввода данных - 'inactiveButtonClass' в классе 'FormValidator' не введено");
             return null;
-        }else if (!(Object.keys(validationData).includes("inputErrorClass"))){
+        }else if (!(Object.keys(params).includes("inputErrorClass"))){
             console.log("Ошибка ввода данных - 'inputErrorClass' в классе 'FormValidator' не введено");
             return null;
-        }else if (!(Object.keys(validationData).includes("errorClass"))){
+        }else if (!(Object.keys(params).includes("errorClass"))){
             console.log("Ошибка ввода данных - 'errorClass' в классе 'FormValidator' не введено");
             return null;
         }
 
-        this.#initClass(validationData, element);
+        this.#initClass(params, element);
 
     }
 
@@ -42,10 +46,10 @@ export class FormValidator {
 
 
 
-    #hideInputError (formElement, inputElement, validationData) {
-        const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-        inputElement.classList.remove(validationData.inputErrorClass);
-        errorElement.classList.remove(validationData.errorClass);
+    #hideInputError (inputElement) {
+        const errorElement = this.#element.querySelector(`.${inputElement.id}-error`);
+        inputElement.classList.remove(this.#validationData.inputErrorClass);
+        errorElement.classList.remove(this.#validationData.errorClass);
         errorElement.textContent = '';
       };
 
@@ -53,57 +57,51 @@ export class FormValidator {
         if (!inputElement.validity.valid) {
           this.#showInputError(inputElement, inputElement.validationMessage);
         } else {
-          this.#hideInputError(this.#element, inputElement, this.#validationData);
+          this.#hideInputError(inputElement);
         }
       };
 
-    #disableButton(buttonElement) {
-        buttonElement.classList.add(this.#validationData.inactiveButtonClass);
-        buttonElement.disabled = true;
+    #disableButton() {
+        this.#buttonElement.classList.add(this.#validationData.inactiveButtonClass);
+        this.#buttonElement.disabled = true;
       }
 
-    #hasInvalidInput(inputList) {
-        return inputList.some((inputElement) => {
+    #hasInvalidInput() {
+        return this.#inputList.some((inputElement) => {
           return !inputElement.validity.valid;
         });
       }
 
-    #toggleButtonState(inputList, buttonElement) {
-        if (this.#hasInvalidInput(inputList)) {
-          this.#disableButton(buttonElement);
+    #toggleButtonState() {
+        if (this.#hasInvalidInput()) {
+          this.#disableButton();
         }
         else {
-          buttonElement.classList.remove(this.#validationData.inactiveButtonClass);
-          buttonElement.disabled = false;
+          this.#buttonElement.classList.remove(this.#validationData.inactiveButtonClass);
+          this.#buttonElement.disabled = false;
         }
       }
 
-    #checkInputList(inputElement, inputList, buttonElement){
+    #checkInputList(inputElement){
         this.#checkInputValidity(inputElement);
-        this.#toggleButtonState(inputList, buttonElement);
+        this.#toggleButtonState();
     }
 
     #setEventListeners (){
-        const inputList = Array.from(this.#element.querySelectorAll(this.#validationData.inputSelector));
-        const buttonElement = this.#element.querySelector(this.#validationData.submitButtonSelector);
-      
-        this.#toggleButtonState(inputList, buttonElement);
+        this.#toggleButtonState();
         
-        inputList.forEach((inputElement) => {
-          inputElement.addEventListener('input', () => this.#checkInputList(inputElement, inputList, buttonElement));
+        this.#inputList.forEach((inputElement) => {
+          inputElement.addEventListener('input', () => this.#checkInputList(inputElement));
         });
       };
 
-    resetErrors(popup, validationData) {
-        const popupForm = popup.querySelector(validationData.formSelector);
-        // const popupForm = popup.querySelector('.popup__form-container');
-        Array.from(popupForm.querySelectorAll(validationData.inputSelector)).forEach(input => {
-          this.#hideInputError(popupForm, input, validationData);
-        });
+    resetValidation() {
+        this.#inputList.forEach(input => {this.#hideInputError(input);});
+        this.#disableButton();
       }
 
     enableValidation (){
-        this.#element.addEventListener('submit', function (evt) { evt.preventDefault(); });
+        // this.#element.addEventListener('submit', function (evt) { evt.preventDefault(); });
         this.#setEventListeners();
     };
 }
