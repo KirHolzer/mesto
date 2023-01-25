@@ -80,10 +80,10 @@ const validationData = {
   // класс делает ошибку видимой span
 };
 
-const form1Validator = new FormValidator(validationData, nameJobForm);
-form1Validator.enableValidation();
-const form2Validator = new FormValidator(validationData, nameLinkForm);
-form2Validator.enableValidation();
+const formJobValidator = new FormValidator(validationData, nameJobForm);
+formJobValidator.enableValidation();
+const formLinkValidator = new FormValidator(validationData, nameLinkForm);
+formLinkValidator.enableValidation();
 
 // Конец части "FormValidator"
 
@@ -122,13 +122,13 @@ nameLinkForm.addEventListener('submit', addFormHandler);
 nameJobForm.addEventListener('submit', submitFormHandler);
 
 buttonEdit.addEventListener('click', () => {
-  form1Validator.resetValidation();
+  formJobValidator.resetValidation();
   fillEditPopup();
   openPopup(popupEdit);
 });
 buttonAdd.addEventListener('click', () => {
   addFormClear();
-  form2Validator.resetValidation();
+  formLinkValidator.resetValidation();
   openPopup(popupNewCard);
 });
 
