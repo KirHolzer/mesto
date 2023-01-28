@@ -1,4 +1,5 @@
 export class Card {
+    #data;
     #name;
     #link;
     
@@ -9,6 +10,7 @@ export class Card {
     buttonLike;
 
     #initClass(data){
+        this.#data = data;
         this.#name = data.name;
         this.#link = data.link;
         this.elementsTemplate = document.querySelector(data.selector).content.querySelector('.elements__grid-item');
@@ -43,6 +45,11 @@ export class Card {
         this.newElement.remove();
     }
 
+    #addPopupListner = function (imported) {
+        imported.fillPopupImage(this.#data);
+        imported.openPopup(imported.imagePopup);
+    }
+    
     createCard (){
         this.elementsTitle.textContent = this.#name;
         this.elementsImage.src = this.#link;
@@ -51,6 +58,9 @@ export class Card {
         this.buttonLike.addEventListener('click', () => this.#likeButtonHandler());
       
         this.buttonDelete.addEventListener('click', () => this.#deleteButtonHandler());
+        import('./index.js').then((imported) => {
+            this.elementsImage.addEventListener('click', () => this.#addPopupListner(imported));
+        });
       
         return this.newElement;
       }

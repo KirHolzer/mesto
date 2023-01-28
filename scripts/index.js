@@ -19,11 +19,11 @@ const nameLinkForm = popupNewCard.querySelector('.popup__form-container_type_new
 const cardNewName = nameLinkForm.querySelector('.popup__input_type_name');
 const cardNewLink = nameLinkForm.querySelector('.popup__input_type_job');
 // ПОПАП картинка
-const imagePopup = document.querySelector('.popup_type-image');
+export const imagePopup = document.querySelector('.popup_type-image');
 const imageBody = imagePopup.querySelector('.popup__image');
 const imageCaption = imagePopup.querySelector('.popup__image-caption');
 // ЗАКРЫТИЕ/ОТКРЫТИЕ ПОПАПОВ
-const openPopup = function (popup) {
+export const openPopup = function (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', handlePopupCloseEsc);
 }
@@ -39,7 +39,7 @@ const handlePopupCloseEsc = function (evt) {
   }
 }
 
-const fillPopupImage = function (element) {
+export const fillPopupImage = function (element) {
   imageBody.src = element.link;
   imageBody.alt = `Изображение ${element.name}`;
   imageCaption.textContent = element.name;
@@ -53,10 +53,6 @@ const renderElement = (obj) => {
   obj['selector'] = elementsTemplateSelector;
   const cardElement = new Card(obj)
   elementsContainer.prepend(cardElement.createCard());
-  cardElement.elementsImage.addEventListener('click', function () {
-    fillPopupImage(obj);
-    openPopup(imagePopup);
-  });
 }
 
 imagePopup.addEventListener('click', closePopup);
@@ -80,10 +76,10 @@ const validationData = {
   // класс делает ошибку видимой span
 };
 
-const formJobValidator = new FormValidator(validationData, nameJobForm);
-formJobValidator.enableValidation();
-const formLinkValidator = new FormValidator(validationData, nameLinkForm);
-formLinkValidator.enableValidation();
+var form1Validator = new FormValidator(validationData, nameJobForm);
+form1Validator.enableValidation();
+var form2Validator = new FormValidator(validationData, nameLinkForm);
+form2Validator.enableValidation();
 
 // Конец части "FormValidator"
 
@@ -122,13 +118,13 @@ nameLinkForm.addEventListener('submit', addFormHandler);
 nameJobForm.addEventListener('submit', submitFormHandler);
 
 buttonEdit.addEventListener('click', () => {
-  formJobValidator.resetValidation();
+  form1Validator.resetValidation();
   fillEditPopup();
   openPopup(popupEdit);
 });
 buttonAdd.addEventListener('click', () => {
   addFormClear();
-  formLinkValidator.resetValidation();
+  form2Validator.resetValidation();
   openPopup(popupNewCard);
 });
 
