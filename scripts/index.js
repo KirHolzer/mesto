@@ -76,9 +76,9 @@ const validationData = {
   // класс делает ошибку видимой span
 };
 
-var form1Validator = new FormValidator(validationData, nameJobForm);
+let form1Validator = new FormValidator(validationData, nameJobForm);
 form1Validator.enableValidation();
-var form2Validator = new FormValidator(validationData, nameLinkForm);
+let form2Validator = new FormValidator(validationData, nameLinkForm);
 form2Validator.enableValidation();
 
 // Конец части "FormValidator"
