@@ -1,42 +1,55 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const mode = process.env.NODE_ENV ||  'development';
-const devMode = (mode === 'development');
-const target = devMode ? 'web' : 'browserslist';
-const devtool =  devMode ? 'sourse-map' : undefined;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: ['@babel/polyfill' ,path.resolve(__dirname, "src", "index.js")],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    clean: true, 
-    filename: '[name].[contenthash].js',
+  entry: {
+    main: "./src/pages/index.js",
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'src', 'index.html')
-  })],
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+    publicPath: "",
+  },
+  mode: "development",
+  devServer: {
+    static: path.resolve(__dirname, "./dist"),
+    open: true,
+    compress: true,
+    port: 8080,
+  },
   module: {
     rules: [
-        {
-            test:/\.html$/i,
-            loader: 'html-loader',
-        },
-        {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
-          },
+      {
+        test: /\.js$/,
+        use: "babel-loader",
+        exclude: "/node_modules/",
+      },
+      {
+        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        type: "asset/resource",
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
           {
-            test: /\.m?js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  ['@babel/preset-env', { targets: "defaults" }]
-                ]
-              }
-            }
-          }
-    ]
-  }
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
+  ],
 };

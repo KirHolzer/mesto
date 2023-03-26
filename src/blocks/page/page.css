@@ -1,0 +1,17 @@
+.page {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
+  background-color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: #ffffff;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+

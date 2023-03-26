@@ -7,17 +7,16 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Kirill Goltser">
-  <link rel="stylesheet" href="./pages/index.css">
   <title>Место</title>
 </head>
 
 <body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/MestoRussia.svg" alt="Логотип Место">
+    <img class="header__logo" src="<%=require('./images/MestoRussia.svg')%>" alt="Логотип Место">
   </header>
   <main class="content">
     <section class="profile">
-      <img class="profile__avatar" src="./images/Jacques-Yves-Cousteau.png" alt="Изображение профиля">
+      <img class="profile__avatar" src="<%=require('./images/Jacques-Yves-Cousteau.png')%>" alt="Изображение профиля">
       <div class="profile__info">
         <div class="profile__title-container">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -92,12 +91,6 @@
       </div>
     </li>
   </template>
-
-  <script type="module" src="./scripts/card.js"></script>
-  <script type="module" src="./scripts/FormValidator.js"></script>
-  <!-- <script src="./scripts/validate.js"></script> -->
-  <script type="module" src="./index.js"></script>
-
 </body>
 
 </html>

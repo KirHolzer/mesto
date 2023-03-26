@@ -1,24 +1,30 @@
 {
-  "main": "index.html",
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "http-server": "^14.1.1"
-  },
+  "name": "mesto_main",
+  "version": "1.0.0",
+  "description": "### Обзор Проект посвящен ведения travel блога и создан в рамках прохождения 4 спринта курса Веб-разработчик. [Яндекс.Практикум](https://practicum.yandex.ru/) Данная работа будет продолжаться несколько спринтов",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build-dev": "webpack",
-    "prod": "webpack --node-env=production"
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
   },
+  "author": "KirHolzer",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.21.0",
+    "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
-    "html-loader": "^4.2.0",
+    "cssnano": "^5.1.15",
     "html-webpack-plugin": "^5.5.0",
-    "style-loader": "^3.3.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss-loader": "^7.1.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "core-js": "^3.29.1"
   }
 }
