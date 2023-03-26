@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Kirill Goltser">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Место</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/MestoRussia.svg" alt="Логотип Место">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="./images/Jacques-Yves-Cousteau.png" alt="Изображение профиля">
+      <div class="profile__info">
+        <div class="profile__title-container">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="button profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+        </div>
+        <p class="profile__profession">Исследователь океана</p>
+      </div>
+      <button class="button profile__add-button" type="button" aria-label="Добавить карточку"></button>
+    </section>
+
+    <section class="elements">
+      <ul class="list elements__grid-table">
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia by Kirill Goltser</p>
+  </footer>
+
+  <div class="popup popup_type_edit">
+    <div class="popup__content">
+      <button class="popup__close-button button" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form-container" action="#" name="profile-edit-form" novalidate>
+        <input class="popup__input popup__input_type_name" id="title-input" type="text" name="name" placeholder="Имя"
+          value="Жак-Ив Кусто" minlength="2" maxlength="40" required>
+        <span class="popup__error title-input-error"></span>
+        <input class="popup__input popup__input_type_job" id="job-input" type="text" name="job" placeholder="О себе"
+          value="Исследователь океана" minlength="2" maxlength="200" required>
+        <span class="popup__error job-input-error"></span>
+        <button class="popup__save-button button" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_new-place">
+    <div class="popup__content">
+      <button class="popup__close-button button" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form-container popup__form-container_type_new-place" action="#" name="profile-new-place-form"
+        novalidate>
+        <input class="popup__input popup__input_type_name" id="name-input" type="text" name="name"
+          placeholder="Название" minlength="2" maxlength="30" required>
+        <span class="popup__error name-input-error"></span>
+        <input class="popup__input popup__input_type_job" id="url-input" type="url" name="link"
+          placeholder="Ссылка на картинку" required>
+        <span class="popup__error url-input-error"></span>
+        <button class="popup__save-button button" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type-image">
+    <figure class="popup__image-container">
+      <button class="button popup__close-button" type="button" aria-label="Закрыть форму"></button>
+      <img class="popup__image" src="#" alt="Изображение, на которое вы кликнули">
+      <figcaption class="popup__image-caption"></figcaption>
+    </figure>
+  </div>
+
+  <template id="elements__template">
+    <li class="elements__grid-item">
+      <div class="elements__image-box">
+        <img class="elements__image" src="#" alt="Изображение в шаблоне">
+      </div>
+      <button class="button elements__delete-button" type="button" aria-label="Удалить элемент"></button>
+      <div class="elements__info-box">
+        <h2 class="elements__text">Тихий Океан</h2>
+        <button class="button elements__like-reaction " type="button" aria-label="Добавить лайк"></button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./scripts/mockCards.js"></script>
+  <script src="./scripts/validate.js"></script>
+  <script src="./scripts/index.js"></script>
+
+</body>
+
+</html>
