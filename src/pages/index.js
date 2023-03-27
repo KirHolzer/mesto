@@ -65,7 +65,7 @@ const renderElement = (obj) => {
   elementsContainer.prepend(cardElement.createCard());
 };
 
-imagePopup.addEventListener("click", closePopup);
+imagePopup.addEventListener("click", () => closePopup(imagePopup));
 
 initialCards.forEach((element) => {
   renderElement(element);
