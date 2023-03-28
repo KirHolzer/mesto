@@ -2,6 +2,7 @@ export class Card {
   #data;
   #name;
   #link;
+  #handleCardClick;
 
   newElement;
   elementsTitle;
@@ -9,7 +10,7 @@ export class Card {
   buttonDelete;
   buttonLike;
 
-  #initClass(data) {
+  #initClass(data, handleCardClick) {
     this.#data = data;
     this.#name = data.name;
     this.#link = data.link;
@@ -24,9 +25,10 @@ export class Card {
       ".elements__delete-button"
     );
     this.buttonLike = this.newElement.querySelector(".elements__like-reaction");
+    this.#handleCardClick = handleCardClick;
   }
 
-  constructor(data) {
+  constructor(data, handleCardClick) {
     if (!Object.keys(data).includes("name")) {
       console.log("Ошибка ввода данных - 'name' в классе 'card' не введено");
       return null;
@@ -38,9 +40,13 @@ export class Card {
         "Ошибка ввода данных - 'selector' в классе 'card' не введено"
       );
       return null;
+    } else if (!handleCardClick) {
+      console.log(
+        "Ошибка ввода данных - 'handleCardClick' в классе 'card' не введено"
+      );
+      return null;
     }
-
-    this.#initClass(data);
+    this.#initClass(data, handleCardClick);
   }
 
   #likeButtonHandler = function () {
@@ -51,27 +57,23 @@ export class Card {
     this.newElement.remove();
   };
 
-  #addPopupListner = function (imported) {
-    imported.fillPopupImage(this.#data);
-    imported.openPopup(imported.imagePopup);
-  };
-
-  createCard() {
-    this.elementsTitle.textContent = this.#name;
-    this.elementsImage.src = this.#link;
-    this.elementsImage.alt = this.#name;
-
+  #setEventListeners() {
     this.buttonLike.addEventListener("click", () => this.#likeButtonHandler());
 
     this.buttonDelete.addEventListener("click", () =>
       this.#deleteButtonHandler()
     );
-    import("../pages/index.js").then((imported) => {
-      this.elementsImage.addEventListener("click", () =>
-        this.#addPopupListner(imported)
-      );
-    });
 
+    this.elementsImage.addEventListener("click", () =>
+      this.#handleCardClick(this.#name, this.#link)
+    );
+  }
+
+  createCard() {
+    this.elementsTitle.textContent = this.#name;
+    this.elementsImage.src = this.#link;
+    this.elementsImage.alt = this.#name;
+    this.#setEventListeners();
     return this.newElement;
   }
 }

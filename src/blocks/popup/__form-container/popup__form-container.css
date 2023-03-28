@@ -1,6 +1,7 @@
 .popup__form-container{
   margin: 48px 0 0 0;
   padding: 0;
+  width: 100%;
 
 
   /*ПЕРЕПИСАНО - старое display: flex;*/
