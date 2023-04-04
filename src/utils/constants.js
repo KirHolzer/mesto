@@ -54,3 +54,11 @@ export const popupNewCardSelector = ".popup_type_new-place";
 export const nameLinkForm = document
   .querySelector(popupNewCardSelector)
   .querySelector(".popup__form-container_type_new-place");
+
+export const avatarSelector = ".profile__avatar";
+export const buttonAvatar = document.querySelector(".profile__avatar-button");
+export const popupAvatarSelector = ".popup_type_new-avatar";
+export const popupDeleteSelector = ".popup_type_delete-card";
+export const avatarLinkForm = document
+  .querySelector(popupAvatarSelector)
+  .querySelector(".popup__form-container_type_avatar");

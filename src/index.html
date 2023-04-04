@@ -16,7 +16,10 @@
   </header>
   <main class="content">
     <section class="profile">
+      <div class="profile__avatar-container">
       <img class="profile__avatar" src="<%=require('./images/Jacques-Yves-Cousteau.png')%>" alt="Изображение профиля">
+      <button class="profile__avatar-button"></button>
+    </div>
       <div class="profile__info">
         <div class="profile__title-container">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -79,6 +82,30 @@
     </figure>
   </div>
 
+  <div class="popup popup_type_delete-card">
+    <div class="popup__content">
+      <button class="popup__close-button button" type="button"></button>
+      <h2 class="popup__title">Вы уверены</h2>
+      <form class="popup__form-container popup__form-container_type_delete-card" action="#" name="profile-delete-card-form"
+        novalidate>
+        <button class="button popup__save-button" type="submit">Да</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_new-avatar">
+    <div class="popup__content">
+      <button class="popup__close-button button" type="button"></button>
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form class="popup__form-container popup__form-container_type_avatar" action="#" name="profile-new-avatar-form" novalidate>
+        <input class="popup__input popup__input_type_job" id="link-input" type="url" name="link" placeholder="Ссылка на аватар"
+          value="" minlength="2" maxlength="200" required>
+        <span class="popup__error link-input-error"></span>
+        <button class="button popup__save-button" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
   <template id="elements__template">
     <li class="elements__grid-item">
       <div class="elements__image-box">
@@ -87,7 +114,10 @@
       <button class="button elements__delete-button" type="button" aria-label="Удалить элемент"></button>
       <div class="elements__info-box">
         <h2 class="elements__text">Тихий Океан</h2>
-        <button class="button elements__like-reaction " type="button" aria-label="Добавить лайк"></button>
+        <div class="elements__likes-container">
+          <button class="button elements__like-reaction " type="button" aria-label="Добавить лайк"></button>
+          <p class="elements__likes">0</p>
+      </div>
       </div>
     </li>
   </template>
