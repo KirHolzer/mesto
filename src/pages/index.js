@@ -1,13 +1,13 @@
 import "./index.css";
 
-import Api from "../scripts/api";
-import { Card } from "../scripts/card.js";
-import { UserInfo } from "../scripts/userInfo";
-import { Section } from "../scripts/section";
-import { FormValidator } from "../scripts/FormValidator.js";
-import { PopupWithForm } from "../scripts/popupWithForm";
-import { PopupwithImage } from "../scripts/popupWithImage";
-import { PopupWithConfirm } from "../scripts/popupWithConfirm";
+import Api from "../components/api";
+import { Card } from "../components/card.js";
+import { UserInfo } from "../components/userInfo";
+import { Section } from "../components/section";
+import { FormValidator } from "../components/FormValidator.js";
+import { PopupWithForm } from "../components/popupWithForm";
+import { PopupwithImage } from "../components/popupWithImage";
+import { PopupWithConfirm} from "../components/popupWithConfirm";
 
 import {
   validationData,
@@ -57,10 +57,10 @@ Promise.all([api.getUser(), api.getInitialCards()])
     userInfo.setUserInfo({
       name: newUser.name,
       info: newUser.about,
-      id: newUser._id,
       avatar: newUser.avatar,
+      id: newUser._id,
     });
-    cardsList.render(initialCards);
+    cardsList.render(initialCards.reverse());
   })
   .catch((err) => console.log(err));
 
@@ -76,9 +76,12 @@ const popupEdit = new PopupWithForm(popupEditSelector, {
           avatar: data.avatar,
           id: data._id,
         });
+        popupEdit.close();
       })
       .catch((error) => console.log(error))
-      .finally(() => popupEdit.setLoading(false));
+      .finally(() => {
+        popupEdit.setLoading(false);
+      });
   },
 });
 
@@ -89,9 +92,12 @@ const popupNewCard = new PopupWithForm(popupNewCardSelector, {
       .createNewCard({ name, link })
       .then((data) => {
         cardsList.addItem(renderElement(data, data.owner._id));
+        popupNewCard.close();
       })
       .catch((error) => console.log(error))
-      .finally(() => popupNewCard.setLoading(false));
+      .finally(() => {
+        popupNewCard.setLoading(false);
+      });
   },
 });
 
@@ -109,9 +115,12 @@ const popupAvatar = new PopupWithForm(popupAvatarSelector, {
           avatar: data.avatar,
           id: data._id,
         });
+        popupAvatar.close();
       })
       .catch((error) => console.log(error))
-      .finally(() => popupAvatar.setLoading(false));
+      .finally(() => {
+        popupAvatar.setLoading(false);
+      });
   },
 });
 
@@ -165,10 +174,12 @@ const handleCardDelete = (card, cardId) => {
       .removeExistingCard(cardId)
       .then((res) => {
         card.removeCard();
-        popupConfirm.close();
       })
       .catch((error) => console.log(error))
-      .finally(() => popupConfirm.setLoading(false));
+      .finally(() => {
+        popupConfirm.close();
+        popupConfirm.setLoading(false);
+      });
   });
 };
 

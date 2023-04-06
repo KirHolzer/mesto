@@ -15,9 +15,11 @@ export class UserInfo {
   }
 
   setUserInfo({ name, info, avatar, id }) {
+    if (name && info && avatar && id) {
     this._nameElement.textContent = name;
     this._infoElement.textContent = info;
     this._avatar.src = avatar;
     this._id = id;
+    }
   }
 }
